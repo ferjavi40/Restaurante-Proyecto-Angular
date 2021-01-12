@@ -1,10 +1,7 @@
-const nav = document.querySelector('nav');
+//plugin para efectos de scroll
 
-window.addEventListener('scroll', function () {
-    const offset = window.pageYOffset;
-
-    if (offset > 75)
-        nav.classList.add('scroll')
-    else
-        nav.classList.remove('scroll')
+window.addEventListener("scroll", function(){
+    let nav = document.querySelector("nav");
+    nav.classList.toggle("sticky", window.scrollY>0);
 });
+
